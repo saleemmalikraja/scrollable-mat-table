@@ -1,0 +1,205 @@
+@import './variable.scss';
+
+#scrollable-table-id{
+   height: calc(100vh - 204px);
+}
+.table-container{
+  .button-block{
+  .cancel-button {
+      button {
+        float: right;
+        margin:10px 0px 10px 10px;
+        border: 1px solid;
+        height: 35px;
+        min-width: 5%;
+      }
+    }
+    .configure-button{
+      button {
+        float: right;
+        margin: 10px 0px 10px 10px;
+        border: 1px solid;
+        height: 35px;
+        min-width: 5%;
+      }
+    }
+  .back-button {
+      button {
+        float: right;
+        margin: 10px 10px 10px 10px;
+        border: 1px solid;
+        height: 35px;
+        min-width: 5%;
+      }
+    }
+  .next-button {
+      button {
+        float: right;
+        margin: 10px 20px 10px 10px;
+        border: 1px solid $color-yellow;
+        height: 35px;
+        min-width: 5%;
+        
+      }
+    }
+  }
+  mat-header-cell{
+    .mat-checkbox{
+      margin-left: 6px;
+    }
+  }
+  mat-cell{
+    margin-left: 5px;
+  }
+  .mat-sort-header-button{
+    margin-left: 10px;
+  }
+}
+mat-row {
+  border-bottom: $white !important;
+}
+
+.chevron {
+  background-color: $color_selective_yellow_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 20px;
+}
+
+.button-filter {
+  height: 36px;
+  top: 12px;
+  margin-top: 10px;
+  border: 1px solid $black;
+}
+
+.no-button {
+  //Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+  box-shadow: none;
+  cursor: default;
+  float: right;
+}
+
+.readyContainer {
+  margin-left: calc(73%);
+  margin-top: 10px;
+
+}
+
+.not-ready {
+  box-shadow: none;
+  cursor: default;
+}
+
+.error{
+  color: $red;
+}
+.ready {
+  box-shadow: none;
+  cursor: default;
+  float: right
+}
+
+.table-content {
+  background: white;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.back {
+  margin-right: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.mat-form-field{
+  margin-top: 10px;
+}
+.mt20px {
+  margin-top: 20px;
+}
+
+.mb5px{
+margin-bottom: 5px;
+}
+
+.mr5px{
+  margin-right: 5px;
+}
+.ml5px {
+  margin-left: 5px
+}
+.mr0px{
+  margin: 0;
+}
+.float-right{
+  float:right;
+}
+.float-left{
+  float:left
+}
+
+.line-height{
+  line-height: 20px;
+}
+.filter{
+  margin-left: 15px;
+  margin-top: -9px;
+  button{
+    margin-left: 10px;   
+      height: 35px;
+      min-width: 5%;
+    
+  }
+}
+.configure{
+  position: fixed;
+  right: 0;
+  width: calc(100vh - 40%);
+  button{
+    height: 35px;
+    min-width: 5%;
+  }
+}
+.search-form{
+  display: flex;
+}
+.search{
+  margin-top: 30px;
+  mat-icon{
+    cursor: pointer;
+  }
+}   
+.loadingSpinner{
+  position: fixed;
+  z-index: 999;
+  float: left;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  &::before{
+      content: '';
+      box-sizing: border-box;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      margin-top: -15px;
+      margin-left: -15px;
+      border-radius: 50%;
+      border: 5px solid #f9c613;
+      border-top-color: #ccc;
+      display: block;
+      -webkit-animation: spinnerDemo2 0.6s linear infinite;
+      animation: spinnerDemo2 0.6s linear infinite;
+  }
+}

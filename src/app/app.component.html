@@ -1,0 +1,32 @@
+<div class="table-content" id="scrollable-table-id">
+  <div class="filter inline-flex float-left">
+    <!-- <span class="back" (click)="back()">
+      <mat-icon class="chevron" class="mt20px">chevron_left</mat-icon>
+    </span> -->
+    <form>
+      <div class="search-form">
+        <mat-form-field class="mat-form-field">
+          <input matInput placeholder="Search by any column" [(ngModel)]="searchString" [ngModelOptions]="{standalone: true}"
+            value="" (keyup)="search($event)">
+
+        </mat-form-field>
+        <span class="search">
+          <mat-icon (click)="search(searchString)">search</mat-icon>
+        </span>
+      </div>
+    </form>
+    <button mat-raised-button (click)="openFilter()" class="button-filter" matBadgePosition="after" matBadgeColor="primary"
+      matBadge="{{filterBadge}}">Filters <mat-icon>expand_more</mat-icon></button>
+  </div>
+  <!-- <div class="configure">
+    <button mat-raised-button (click)="configure()" [disabled]="!indeterminate" class="button-filter mr0px">Configure<mat-icon>expand_more</mat-icon></button>
+  </div> -->
+  <div class="table-container">
+    <app-scrollable-data-table [ng6TableConfig]="tableConfig" [ng6TableData]="postData" (ng6TableEvents)="ng6TableEvents($event)">
+
+    </app-scrollable-data-table>
+  </div>
+  <div *ngIf="loadingPage" class="loadingSpinner">
+  </div>
+
+</div>

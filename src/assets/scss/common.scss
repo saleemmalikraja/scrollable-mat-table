@@ -1,0 +1,58 @@
+body,
+html {
+  margin: 0 auto;
+  height: calc(100%) !important;
+  font-family: Roboto, 'Helvetica Neue', sans-serif, Univers-LT-Std,
+    'Univers 57 Condensed';
+}
+
+.mat-drawer-container {
+  background-color: #e6e6e6 !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+#harvAppClass {
+  font-display: 'Univers 57 Condensed' !important;
+  overflow: hidden !important;
+}
+
+.toast-container {
+  margin-bottom: 20px;
+
+  .toast-bottom-center {
+    .toast {
+      width: 200px;
+      height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .toast-message {
+        font-family: Roboto;
+      }
+    }
+  }
+}
+
+button {
+  border-radius: 5px !important;
+}
+
+.mat-table {
+  // height:inherit !important;
+  .mat-row {
+    border-bottom-width: 1px;
+  }
+
+  .mat-header-row {
+    min-height: 40px;
+  }
+
+  .table-column {
+    .column-content {
+      font-family: Roboto;
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}

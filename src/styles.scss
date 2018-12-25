@@ -1,0 +1,176 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './assets/scss/variables.scss';
+@import './assets/scss/common.scss';
+
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'Univers 57 Condensed';
+  src: url('./assets/fonts/univers-57-condensed-1361510623_0.eot');
+}
+
+@font-face {
+  font-family: 'Univers 57 Condensed';
+  src: url('./assets/fonts/univers-57-condensed-1361510623_0.otf');
+}
+
+@font-face {
+  font-family: 'Univers 57 Condensed';
+  src: url('./assets/fonts/univers-57-condensed-1361510623_0.svg');
+}
+
+@font-face {
+  font-family: 'Univers 57 Condensed';
+  src: url('./assets/fonts/univers-57-condensed-1361510623_0.woff');
+}
+
+@font-face {
+  font-family: 'Univers-LT-Std';
+  src: url('./assets/fonts/Univers-LT-Std-67-Bold-Condensed_46347.eot');
+}
+
+@font-face {
+  font-family: 'Univers-LT-Std';
+  src: url('./assets/fonts/Univers-LT-Std-67-Bold-Condensed_46347.otf');
+}
+
+@font-face {
+  font-family: 'Univers-LT-Std';
+  src: url('./assets/fonts/Univers-LT-Std-67-Bold-Condensed_46347.svg');
+}
+
+@font-face {
+  font-family: 'Univers-LT-Std';
+  src: url('./assets/fonts/Univers-LT-Std-67-Bold-Condensed_46347.woff');
+}
+
+@import '~ngx-toastr/toastr.css';
+@import '~@angular/material/theming';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+@include mat-core();
+
+.app-one-theme {
+  $my-app-primary: mat-palette($mat-amber, 600);
+  $my-app-accent: mat-palette($mat-grey, 600);
+  $my-app-warn: mat-palette($mat-grey, 900);
+  $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+  @include angular-material-theme($my-app-theme);
+}
+
+.app-two-theme {
+  $alternate-primary: mat-palette($mat-indigo, 500);
+  $alternate-accent: mat-palette($mat-yellow, 400);
+  $alternate-warn: mat-palette($mat-indigo, 900);
+  $alternate-theme: mat-light-theme($alternate-primary,
+    $alternate-accent,
+    $alternate-warn);
+  @include angular-material-theme($alternate-theme);
+}
+
+/* App component - CSS - START */
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-horizontal-content-container {
+  padding: 0 !important;
+}
+.app-button-border{
+  border: 1px solid #212121 !important;
+}
+
+/* App component - CSS - END */
+// will be referred in smart component and in app component
+.container {
+  display: flex;
+}
+
+/* Toaster */
+.toast-container.toast-top-full-width .toast {
+  width: 100% !important;
+  margin-top: 5%;
+  height: 45px !important;
+}
+
+.toast-error {
+  background-color: #e52018;
+}
+
+.toast-success {
+  background-color: #8bbb49;
+}
+
+.toast-info {
+  background-color: #1e88e5;
+}
+
+.mat-sort-header-arrow {
+  opacity: 0.5 !important;
+}
+
+span.mat-sort-header-disabled>div.mat-sort-header-container>div.mat-sort-header-arrow {
+  opacity: 0 !important;
+}
+
+span[aria-sort] > div >div.mat-sort-header-arrow  {
+  opacity: 1 !important;
+}
+
+/* spinner */
+.loading {
+  position: fixed;
+  z-index: 999;
+  float: left;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid transparent;
+  // Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  &:before {
+    content: '';
+    // Instead of the line below you could use @include box-sizing($bs)
+    box-sizing: border-box;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -15px;
+    margin-left: -15px;
+    // Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    border: 5px solid #f9c613;
+    border-top-color: #ccc;
+    display: block;
+    animation: spinnerDemo2 0.6s linear infinite;
+  }
+}
+
+@keyframes spinnerDemo2 {
+  to {
+    // Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .readyContainer {
+    margin-left: 68% !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .readyContainer {
+    margin-left: 55% !important;
+  }
+}
